@@ -20,7 +20,7 @@ app.use((req,res,next)=>{
 });
 
 app.use('/usuario', routerUser);
-//app.use('/citas', routerCitas);
+app.use('/citas', routerCitas);
 
 
 app.listen(4004, ()=> console.log('Servidor levantado en el puerto 4000'));
