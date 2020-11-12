@@ -3,7 +3,7 @@ const service_citas = require('../services/services_citas');
 
 router.get('/citas', service_citas.listarCitas);
 router.get('/pending', service_citas.citasPendientes );
-router.delete('/citas', service_citas.cancelarCita);
+router.delete('/citasd', service_citas.cancelarCita);
 router.post('/citas', service_citas.crearCita);
 
 
