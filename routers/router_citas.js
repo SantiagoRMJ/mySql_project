@@ -4,7 +4,7 @@ const service_citas = require('../services/services_citas');
 router.get('/citas', service_citas.listarCitas);
 router.get('/pending', service_citas.citasPendientes );
 router.delete('/cita', service_citas.cancelarCita);
-router.post('/citas', service_citas.crearCita);
+router.post('/morecitas', service_citas.crearCita);
 
 
 module.exports.routes = router;
