@@ -22,5 +22,6 @@ app.use((req,res,next)=>{
 app.use('/usuario', routerUser);
 app.use('/citas', routerCitas);
 
+const PORT = process.env.PORT || 4000
 
-app.listen(4004, ()=> console.log('Servidor levantado en el puerto 4000'));
+app.listen(PORT, ()=> console.log('Servidor levantado en' + PORT));
