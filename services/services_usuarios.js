@@ -2,7 +2,19 @@ const sequelize = require('../models/index.js');
 
 
 exports.registro = async (req, res) =>{
-    let {nombre, apellidos, nacimiento, telefono, direccion, covid, password, email, dni} = req.body;
+    
+    
+    let user = await user.create({
+        nombre: req.body.nombre,
+        apellidos:req.body.apellidos,
+        nacimiento:req.body.nacimiento,
+        telefono:req.body.telefono,
+        direccion:req.body.direccion,
+        covid:req.body.covid,
+        password:req.body.password,
+        email:req.body.email,
+        dni:req.body.dni
+    })
     await sequelize.query(`INSERT INTO USUARIOS (name, password, last_name, email, role, address, dni, born, covid, 
         history_id, observations, defaulter, createdAt, updatedAt)
         VALUES ('${nombre}', '${apellidos}', '${nacimiento}', '${telefono}', '${direccion}', '${covid}', 
